@@ -20,7 +20,7 @@ def convertToRGB(image):
     return cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 #Loading the classifier for frontal face
-haar_cascade_face = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_default.xml')
+haar_cascade_face = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 faces_rects = haar_cascade_face.detectMultiScale(test_image_gray, scaleFactor = 1.4, minNeighbors = 5);
 # Let us print the no. of faces found
 print('Faces found: ', len(faces_rects))
@@ -59,7 +59,7 @@ test_image_gray_2 = cv2.cvtColor(test_image2, cv2.COLOR_BGR2GRAY)
 # Displaying grayscale image
 plt.imshow(test_image_gray_2, cmap='gray')
 
-haar_cascade_face = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_default.xml')
+haar_cascade_face = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 #call the function to detect faces
 faces = detect_faces(haar_cascade_face, test_image2)
@@ -95,7 +95,7 @@ def convertToRGB(image):
     return cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 #Loading the classifier for frontal face
-haar_cascade_face = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_default.xml')
+haar_cascade_face = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 #faces_rects = haar_cascade_face.detectMultiScale(test_image_gray, scaleFactor = 1.001, minNeighbors = 2, maxSize = (30,30));------ -1 face
 #faces_rects = haar_cascade_face.detectMultiScale(test_image_gray, scaleFactor = 1.001, minNeighbors = 2, maxSize = (27,27));------ -2 faces
 faces_rects = haar_cascade_face.detectMultiScale(test_image_gray, scaleFactor = 1.001, minNeighbors = 16, maxSize = (25,25));
